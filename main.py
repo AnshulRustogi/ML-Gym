@@ -13,6 +13,14 @@ class MLGym:
         protoFile, weightsFile = modelfiles
         if os.path.isfile(protoFile) and os.path.isfile(weightsFile):
             self.MPIINet = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
+        elif os.path.isfile(weightsFile)==False:
+            try:
+                print("Downloading required model...")
+                os.system("wget -c http://posefs1.perception.cs.cmu.edu/OpenPose/models/pose/mpi/pose_iter_160000.caffemodel -P models/MPII")
+                self.MPIINet = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
+            except:
+                print("Error downloading caffemodel")
+                exit(-1)
         else:
             print("Error reading model files")
             exit(-1)
