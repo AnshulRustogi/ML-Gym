@@ -50,5 +50,5 @@ docker run --rm -it -e DISPLAY=$DISPLAY --privileged --volume ~/.Xauthority -v /
     - 1: The skeleton would be displayed
     - 0: The skeleton would not be displayed
 ## Contributors
-* Anshul Rustogi
 * Rishabh Rustogi
+* Anshul Rustogi
