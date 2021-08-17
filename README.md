@@ -46,7 +46,7 @@ docker run --rm -it -e DISPLAY=$DISPLAY --privileged --volume ~/.Xauthority -v /
     - \<source\>: location of the video file for input. Eg: ```--videoInput=Video/sampleVideo.mp4```
 3) --activity=pushup/squats
     - Specifc the activity done by the user either squats or pushup
-4) --displaySkeleton=1/0
+4) --displaySkeleton=0/
     - 1: The skeleton would be displayed
     - 0: The skeleton would not be displayed
 ## Contributors
