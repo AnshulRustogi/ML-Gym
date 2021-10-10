@@ -34,7 +34,7 @@ docker run --rm -it -e DISPLAY=$DISPLAY --privileged --volume ~/.Xauthority -v /
 ```
 * To run in docker on nvidia-gpu:
 ```bash
-docker run --rm -it -e DISPLAY=$DISPLAY --privileged --volume ~/.Xauthority -v /tmp/.X11-unix:/tmp/.X11-unix:ro --device /dev/video0 --runtime=nvidia --gpus all ml-gym:gpu --device=gpu
+docker run --rm -it -e DISPLAY=$DISPLAY --privileged --volume ~/.Xauthority -v /tmp/.X11-unix:/tmp/.X11-unix:ro --device /dev/video0 --gpus all anshulrustogi/ml-gym:gpu --device=gpu
 ```
 ## Optional Arugments
 1) --device=gpu/cpu
